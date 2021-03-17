@@ -16,22 +16,27 @@ function App() {
 }
 
 function Events() {
+  let title="Event";
   return (
     <>
     <h2>Events</h2>
     <form action="">
-
+      <input type="text"/>
+      <button>Add {title}</button>
     </form>
 
     </>
   )
 }
+
 function Users() {
+  let title = "User";
   return (
     <>
     <h2>Users</h2>
     <form action="">
-
+    <input type="text"/>  
+    <button>Add {title}</button>    
     </form>
 
     </>
