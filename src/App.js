@@ -1,25 +1,57 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    // <div className="App">
+    <>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>React Eventonica</h1>
       </header>
-    </div>
+      <Events />
+      <Users />
+    </>
+    // </div>
   );
 }
+
+function Events() {
+  return (
+    <>
+    <h2>Events</h2>
+    <form action="">
+
+    </form>
+
+    </>
+  )
+}
+function Users() {
+  return (
+    <>
+    <h2>Users</h2>
+    <form action="">
+
+    </form>
+
+    </>
+  )
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 export default App;
