@@ -91,7 +91,7 @@ const DateDay = (props) => {
   const [eventDate, setDate] = useState(today);
 
   useEffect(() => {
-  console.log(`the selected date is ${eventDate}`)
+    console.log({eventDate})
   }, [eventDate]);
 
   return (
