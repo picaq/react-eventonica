@@ -2,7 +2,10 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
+const today = new Date().toISOString().split('T')[0];
+
 function App() {
+
 
   return (
     // <div className="App">
@@ -34,7 +37,7 @@ function Events(props) {
     </Form>
     <form>
 
-    <DateDay />
+    <DateDay/>
 
 
     {/* <button value="submit" name="submit"/> */}
@@ -91,10 +94,16 @@ const Form = (props) => {
 }
 
 const DateDay = (props) => {
-  const today = new Date().toISOString().split('T')[0];
-  let changeDate = () => {
-    console.log(props.day);
-  }
+  // let changeDate = () => {
+  //   console.log(props.day);
+  // }
+
+  const [eventDate, setDate] = useState(today);
+
+  useEffect(() => {
+  console.log(`the selected date is ${eventDate}`)
+  }, [eventDate]);
+
   return (
     <>
     <label for="date">Date:</label>
@@ -102,9 +111,9 @@ const DateDay = (props) => {
         type="date" 
         id="date" 
         name="date"
-        value={props.day}
+        value={today}
         min={today}
-        onChange={changeDate} 
+        onChange={() => setDate(eventDate) }
 
       />
 
