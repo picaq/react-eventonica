@@ -96,7 +96,7 @@ const DateDay = (props) => {
 
   return (
     <>
-    <label for="date">Date:</label>
+    <label htmlFor="date">Date:</label>
       <input 
         type="date" 
         id="date" 
