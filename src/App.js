@@ -76,16 +76,6 @@ const Form = (props) => {
   <>
     <h2>{props.title}s</h2>
     <form>
-      {/* <label>
-        {title} Name:
-          <input
-            name="eventName"
-            value={name}
-            onChange={(e) => {
-              setName(e.target.value);
-            }}
-          />
-      </label> */}
       <input type="text"/>
       <button>Add {props.title} Name</button>
     </form>
@@ -111,10 +101,9 @@ const DateDay = (props) => {
         type="date" 
         id="date" 
         name="date"
-        value={today}
+        value={eventDate}
         min={today}
-        onChange={() => setDate(eventDate) }
-
+        onChange={(e) => setDate(e.target.value) }
       />
 
     </>
