@@ -1,7 +1,9 @@
 // import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
+
   return (
     // <div className="App">
     <>
@@ -22,6 +24,7 @@ function App() {
 
 function Events(props) {
   // let title="Event";
+
   return (
     <>
 
@@ -31,7 +34,7 @@ function Events(props) {
     </Form>
     <form>
 
-    <DateDay onChange={() => changeDate()} />
+    <DateDay />
 
 
     {/* <button value="submit" name="submit"/> */}
@@ -88,10 +91,10 @@ const Form = (props) => {
 }
 
 const DateDay = (props) => {
-  let changeDate = () => {
-
-  }
   const today = new Date().toISOString().split('T')[0];
+  let changeDate = () => {
+    console.log(props.day);
+  }
   return (
     <>
     <label for="date">Date:</label>
@@ -101,6 +104,7 @@ const DateDay = (props) => {
         name="date"
         value={props.day}
         min={today}
+        onChange={changeDate} 
 
       />
 
