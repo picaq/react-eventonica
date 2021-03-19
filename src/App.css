@@ -4,7 +4,14 @@
 
 .App-logo {
   height: 40vmin;
+  height: 1.05em;
+  vertical-align: middle;
+  vertical-align: .143em;
   pointer-events: none;
+  display: inline-block;
+  margin-right: -4.815em;
+  margin-left: 3.108em;
+  opacity: .66;
 }
 
 @media (prefers-reduced-motion: no-preference) {

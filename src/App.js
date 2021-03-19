@@ -1,4 +1,4 @@
-// import logo from './logo.svg';
+import logo from './logo.svg';
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
@@ -11,7 +11,7 @@ function App() {
     // <div className="App">
     <>
       <header className="App-header">
-        <h1>React Eventonica</h1>
+        <h1><img className="App-logo" src={logo} alt="React atom logo spinning"/> Eventonica</h1>
       </header>
       <main>
         <Search title="Search"/>
