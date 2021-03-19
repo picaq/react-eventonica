@@ -1,14 +1,39 @@
 import logo from './logo.svg';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, setState } from 'react';
 import './App.css';
+
 
 const today = new Date().toISOString().split('T')[0];
 let space = ".33rem";
 // let eventDate;
+
+class Api extends React.Component {
+    constructor(props) {
+    super(props);
+    this.state = { apiResponse: "" };
+    }
+
+    callAPI() {
+        fetch("http://localhost:9000/testAPI")
+            .then(res => res.text())
+            .then(res => this.setState({ apiResponse: res }));
+    }
+
+    componentWillMount() {
+        this.callAPI();
+    }
+    render() {
+      return(
+        <p className="App-intro">{this.state.apiResponse}</p>
+      )
+    }
+}
+
+
 function App() {
 
-
   return (
+    
     // <div className="App">
     <>
       <header className="App-header">
@@ -18,8 +43,8 @@ function App() {
         <Search title="Search"/>
         <Events />
         <Users />
+        <Api />
 
-        
       </main>
     </>
     // </div>
