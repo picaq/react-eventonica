@@ -39,16 +39,17 @@ function Events(props) {
   const [eventDate, setDate] = useState(today);
 
   useEffect(() => {
-    console.log({eventDate})
+    console.log("Date Changed", {eventDate})
   }, [eventDate]);
 
-  let eventsObject = {eventDate, eventName};
+ 
   useEffect(() => {
-    console.log({eventsObject})
-  }, [eventsObject]);
-
+    console.log("Event Name Changed", {eventName})
+  }, [eventName]);
+  
+  let eventsObject = {eventDate, eventName};
   let sendEventsObject = () => {
-    console.log({eventsObject});
+    console.log("Add Event button pressed", eventsObject);
   }
 
   return (
