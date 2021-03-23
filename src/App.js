@@ -12,14 +12,15 @@ function App() {
     // <div className="App">
     <>
       <header className="App-header">
-        <h1><img className="App-logo" src={logo} alt="React atom logo spinning"/> Eventonica</h1>
+        <h1>
+          <img className="App-logo" src={logo} alt="React atom logo spinning"/>
+          Eventonica
+        </h1>
       </header>
       <main>
         <Search title="Search"/>
         <Events />
         <Users />
-
-        
       </main>
     </>
     // </div>
@@ -54,45 +55,42 @@ function Events(props) {
 
   return (
     <>
-
     <Title title = {title} />
-
     <div>
-
-    <label htmlFor="date">Date:</label>
-      <input 
-        type="date" 
-        id="date" 
-        name="date"
-        value={eventDate}
-        min={today}
-        onChange={(e) => setDate(e.target.value) }
-      />
-    {/* <NameField 
-      title={title} 
-      value={eventName}
-      placeholder={eventName}
-      onChange={(e) => setEventName(e.target.value)}
-    /> */}
+      <label htmlFor="date">Date:</label>
+        <input 
+          type="date" 
+          id="date" 
+          name="date"
+          value={eventDate}
+          min={today}
+          onChange={(e) => setDate(e.target.value) }
+        />
+      {/* <NameField 
+            title={title} 
+            value={eventName}
+            placeholder={eventName}
+            onChange={(e) => setEventName(e.target.value)}
+          /> */}
       <label> {title} Name:&nbsp;
         <input 
           type="text"
           value={eventName}
           placeholder="eventName"
-      onChange={(e) => setEventName(e.target.value)}
+          onChange={(e) => setEventName(e.target.value)}
         />
       </label>
 
-    {/* <AddButton 
-        title={title}
-        onClick={(e) => setEventsObject(e.target,{eventDate, eventName})} 
-    /> */}
-    <button 
-      style={{ display: "block",
-  marginLeft: "auto"}} 
-      onClick={(e) => sendEventsObject(e.target)}>Add {title}
-    </button>
-    {/* <button value="submit" name="submit"/> */}
+      {/* <AddButton 
+            title={title}
+            onClick={(e) => setEventsObject(e.target,{eventDate, eventName})} 
+          /> */}
+      <button 
+        style={display: "block", marginLeft: "auto"} 
+        onClick={(e) => sendEventsObject(e.target)}> 
+          Add {title}
+      </button>
+      {/* <button value="submit" name="submit"/> */}
     </div>
  
     </>
@@ -104,7 +102,6 @@ function Users(props) {
   let value = "value";
   return (
     <>
-
     <Title title={title} />
     <form>
       <NameField title={title} value={value}/>
@@ -113,7 +110,6 @@ function Users(props) {
         onClick={(e) => setEventName(e.target.value)} 
       />
     </form>
-
     </>
   )
 }
@@ -139,10 +135,13 @@ const Title = (props) => {
 }
 const AddButton = (props) => {
   return (
-  <>
-      <button style={{ display: "block",
-  marginLeft: "auto"}} >Add {props.title}</button>
-  </>
+    <>
+    <button 
+      style={{ display: "block",
+      marginLeft: "auto"}}>
+      Add {props.title}
+    </button>
+    </>
   )
 }
 const NameField = (props) => {
